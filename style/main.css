@@ -1,0 +1,172 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.quiz{
+    color: green;
+    text-align: center;
+    margin-top: 30px;
+}
+.quiz-reason{
+    margin-top: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+.reason-advantage{
+    color: gray;
+    margin-top: 16px;
+    text-align: center;
+    line-height: 24px;
+}
+.container{
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(2, 200px);
+    grid-row-gap: 40px;
+    margin-top: 120px;
+}
+.container-items{
+    box-shadow: 3px 3px 15px 5px gray;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+justify-content: center;
+    flex-direction: column;
+    padding-left: 30px;
+}
+.container-items:hover{
+background-color: green;
+transition: 1s;
+cursor: pointer;
+}
+.number-box{
+    position: absolute;
+    top: -40px;
+    left: 30px;
+    width: 90px;
+    height: 90px;
+    background-color: rgb(99, 99, 99);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-items:hover .number-box{
+    transition: 1s;
+background-color: white;
+
+}
+.br1{
+    display: none;
+        }
+        .br3{
+            display: none;
+        }
+.number{
+    color: rgb(5, 215, 5);
+    font-weight: 700;
+}
+.container-items:hover .number{
+    color: white;
+    transition: 1s;
+}
+.topic{
+    color: black;
+    font-weight: 700;
+}
+.container-items:hover.topic{
+    color: white;
+}
+.text-explaining{
+    color: gray;
+    margin-top: 16px;
+    line-height: 18px;
+}
+.container-items:hover .text-explaining{
+    color: white;
+}
+.br4{
+    display: block;
+}
+@media only screen and (max-width:768px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 250px);
+        grid-template-rows: repeat(3, 280px);
+        justify-content: center;
+        grid-gap: 40px 30px;
+    margin-top: 80px;
+    }
+    .container-items:hover{
+background-color: white;
+transform: scale(1.04);
+border: 2px solid rgb(86, 187, 86);
+    }
+    .number-box{
+        position: absolute;
+        top: -25px;
+        left: 90px;
+        width: 70px;
+        height: 70px;
+        background-color: gray;
+    }
+    .container-items:hover    .number-box{
+transform: rotate(360deg);
+transition: 1s;
+background-color: rgb(86, 187, 86);
+    }
+    .container-items:hover .text-explaining{
+        color: gray;
+        margin-top: 16px;
+        line-height: 24px;
+    }
+    .br1{
+        display: none;
+            }
+    .br3{
+        display: none;
+    }
+    .br4{
+        display: none;
+    }
+}
+@media only screen and (max-width:450px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 220px);
+        grid-template-rows: repeat(6, 300px);
+        justify-content: center;
+        grid-gap: 40px 20px;
+    margin-top: 40px;
+    }
+    .container-items{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .text-explaining{
+        text-align: center;
+        line-height: 28px;
+    }
+    .br2{
+display: none;
+    }
+    .number-box{
+        position: absolute;
+        top: -25px;
+        left: 75px;
+        width: 70px;
+        height: 70px;
+        background-color: gray;
+    }
+    .br1{
+        display: block;
+    }
+    .br3{
+        display: block;
+    }
+}
